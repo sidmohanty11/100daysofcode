@@ -19,9 +19,7 @@ e = combined.count('e')
 
 love = l + o + v + e
 
-love_score = str(true) + str(love)
-
-print(love_score)
+love_score = int(str(true) + str(love))
 
 if love_score>90 or love_score<10:
     print(f'Your score is {love_score}, you are like mentos and he/she be like your coke!')
