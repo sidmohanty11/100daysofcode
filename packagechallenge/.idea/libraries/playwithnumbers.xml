@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="playwithnumbers">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../Numbers/out/production/Numbers/com/playwithnumbers" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
