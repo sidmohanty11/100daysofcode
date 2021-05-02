@@ -1,13 +1,12 @@
 package com.codewithsid;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        alphaNumera();
+
     }
 //You are given an array of integers, as well as a number n.
 // You have to find and print the index of the number n in the given array.
@@ -144,35 +143,111 @@ public class Main {
     // as input (for ex : 13623) and output the following number which is
     // equal to :- 1st number x 1 + 2nd number x 4 + 3rd number x 9 + 4th number
     // x 16 + 5th number x 25.
-
-
-
+    public static int magicValue2(int x){
+        String s = String.valueOf(x);
+        int magic=0;
+        int[] arr = new int[s.length()];
+        for(int z=0; z<arr.length; z++){
+            arr[z] = (x % 10) * (int)Math.pow(s.length()-z,2);
+            System.out.println(arr[z]);
+            x = x/10;
+            magic += arr[z];
+        }
+        return magic;
+    }
 
     //Write a program to find all the prime number in a particular range.
-
-
-
+    public static void arrayOfPrimes(int a, int b){
+        for (int i = a; i <= b; i++) {
+            boolean isPrime = primeCheck(i);
+            if (isPrime) {
+                System.out.println(i);
+            }
+        }
+    }
+    public static boolean primeCheck(int numberToCheck) {
+        int rem;
+        if(numberToCheck==1 || numberToCheck==0){
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numberToCheck); i++) {
+            rem = numberToCheck % i;
+            if (rem == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     //Write a code to perform division without using '/' operator.
-
-
-
+    public static int divideWithoutDivide(int x,int y){
+        int count = 0;
+        while(x != 0){
+            x = x-y;
+            count++;
+        }
+        return count;
+    }
 
     //Write a program to accept a list of numbers from the user, and then
     // find which number occurs twice. Note: Only one number will occur twice
     // in the input list of numbers.
-
-
+    public static void findMeIRepeat(){
+        Scanner scanner = new Scanner(System.in);
+        Set<Integer> set = new HashSet<>();
+        String s = scanner.nextLine();
+        while(true){
+            if(s.equalsIgnoreCase("q")){
+                System.exit(0);
+            } else{
+                Integer temp = scanner.nextInt();
+                if(set.add(temp)){
+                    set.add(temp);
+                }else{
+                    System.out.println(temp);
+                    break;
+                }
+            }
+        }
+    }
 
     //Given an alphanumeric string as input, you have to find the number of vowels,
     // consonants and numbers present in the string, and print the count of each.
-
-
-
+    public static void countMeIAmSpecial(){
+        Scanner scanner = new Scanner(System.in);
+        String alphanumericTheyCallME = scanner.nextLine().toLowerCase();
+        char[] iCanHelp = alphanumericTheyCallME.toCharArray();
+        int cV = 0, cC = 0, cN = 0;
+        for(int i = 0;i<iCanHelp.length;i++){
+            if((int)iCanHelp[i]>=48 && (int)iCanHelp[i]<=57){
+                cN++;
+            }else if((int)iCanHelp[i] == 97 || (int)iCanHelp[i] == 101 || (int)iCanHelp[i] == 105 || (int)iCanHelp[i] == 111 || (int)iCanHelp[i] == 117){
+                cV++;
+            }else{
+                cC++;
+            }
+        }
+        System.out.println("Numbers:"+cN);
+        System.out.println("Vowels:"+cV);
+        System.out.println("Consonants:"+cC);
+    }
 
     //Write a code to find the square root of a number without using any inbuilt function.
+    public static void squareMeUp(int x){
 
-
+    }
 
     //Given a number in decimal format, you have to find the binary representation of that number.
+    public static void iAmYetInteresting(int d){
+        int[] arr = new int[100];
+        int x = 0;
+        while(d > 0){
+            arr[x] = d % 2;
+            d = d/2;
+            x = x+1;
+        }
+        for (int i = x-1;i>=0;i--){
+            System.out.print(arr[i]);
+        }
+    }
 }
