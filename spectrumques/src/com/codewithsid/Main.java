@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-
+        System.out.println(squareMeUp(146));
     }
 //You are given an array of integers, as well as a number n.
 // You have to find and print the index of the number n in the given array.
@@ -233,9 +233,30 @@ public class Main {
     }
 
     //Write a code to find the square root of a number without using any inbuilt function.
-    public static void squareMeUp(int x){
-
-    }
+    public static double squareMeUp(int x){
+        int i = 1;
+        double start = 0;
+        for (i=1; i*i<=x; i++){
+            if(i*i == x){
+                return i;
+            }else{
+                start = i;
+            }
+        }
+        double j = start+1;
+        System.out.println(j);
+        double var = 0.01;
+        while (start<j){
+            start += var;
+            if(start*start == x){
+                return i;
+            } else if(start*start > x){
+                return start-0.01;
+            }
+            var+=0.01;
+        }
+        return -1;
+     }
 
     //Given a number in decimal format, you have to find the binary representation of that number.
     public static void iAmYetInteresting(int d){
