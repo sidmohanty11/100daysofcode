@@ -24,5 +24,12 @@ public class Main {
         System.out.println("Reverse of 123 is: " + reverseInteger.reverse(val));
         int val2 = -123;
         System.out.println("Reverse of -123 is: " + reverseInteger.reverse(val2));
+
+        // Test Roman to Integer
+        RomanToInteger romanToInteger = new RomanToInteger();
+        String s = "LVIII"; // 58
+        System.out.println("Roman 'LVIII' to Integer: " + romanToInteger.romanToInt(s));
+        String s2 = "MCMXCIV"; // 1994
+        System.out.println("Roman 'MCMXCIV' to Integer: " + romanToInteger.romanToInt(s2));
     }
 }
