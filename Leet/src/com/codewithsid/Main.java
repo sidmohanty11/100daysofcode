@@ -17,5 +17,12 @@ public class Main {
         System.out.println("Is 121 a palindrome? " + palindromeNumber.isPalindrome(x));
         int y = -121;
         System.out.println("Is -121 a palindrome? " + palindromeNumber.isPalindrome(y));
+
+        // Test Reverse Integer
+        ReverseInteger reverseInteger = new ReverseInteger();
+        int val = 123;
+        System.out.println("Reverse of 123 is: " + reverseInteger.reverse(val));
+        int val2 = -123;
+        System.out.println("Reverse of -123 is: " + reverseInteger.reverse(val2));
     }
 }
