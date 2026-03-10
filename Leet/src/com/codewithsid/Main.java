@@ -31,5 +31,12 @@ public class Main {
         System.out.println("Roman 'LVIII' to Integer: " + romanToInteger.romanToInt(s));
         String s2 = "MCMXCIV"; // 1994
         System.out.println("Roman 'MCMXCIV' to Integer: " + romanToInteger.romanToInt(s2));
+
+        // Test Valid Parentheses
+        ValidParentheses validParentheses = new ValidParentheses();
+        String p1 = "()[]{}";
+        System.out.println("Is '()[]{}' valid? " + validParentheses.isValid(p1));
+        String p2 = "(]";
+        System.out.println("Is '(]' valid? " + validParentheses.isValid(p2));
     }
 }
